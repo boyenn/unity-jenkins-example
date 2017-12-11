@@ -1,9 +1,9 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test') {
+        stage('Run') {
             steps {
-                sh 'ls'
+                sh 'docker-compose up -d'
             }
         }
     }
